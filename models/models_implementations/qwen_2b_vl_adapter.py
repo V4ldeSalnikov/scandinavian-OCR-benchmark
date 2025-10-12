@@ -6,8 +6,6 @@ class Qwen2bAdapter(OCRModel):
 
     def __init__(self):
         self.id = "qwen2-2b-vl"
-        from huggingface_hub import logging as hf_logging
-        from transformers.utils import logging as t_logging
         self.model = Qwen2VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2-VL-2B-Instruct", torch_dtype="auto", device_map="auto")
         self.processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct")
