@@ -18,16 +18,13 @@ class EasyOCRAdapter(OCRModel):
         img = inputs.image.convert("RGB")
         cv_image = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
 
-
-
-        #detail = 0 will output only text, paragraph = True
+        #detail = 0 will output only text
         result = self._reader.readtext(cv_image, detail = 0, paragraph = True )
 
         text = ""
         for res in result :
             text += res + " "
 
-        #delete last space from string
         text = text [:-1]
 
         return OCROutput(text)
