@@ -10,4 +10,5 @@ Current TODO list :
 - [x] Create interface for models
 - [ ] Add real dataset for evaluation
 - [ ] Add Tesseract model to models
-- [ ] Add either requirements.txt or pyproject.toml to manage dependencies 
+- [x] Add requirements.txt
+- [ ] Transfer project ot uv to manage dependencies 
