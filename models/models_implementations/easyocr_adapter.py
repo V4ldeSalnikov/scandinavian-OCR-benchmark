@@ -6,6 +6,7 @@ from models.model_interface import OCRModel, OCRInput, OCROutput
 
 class EasyOCRAdapter(OCRModel):
 
+
     def __init__(self):
         self.id = "easyocr"
         self._reader = easyocr.Reader(['da'])
