@@ -12,5 +12,7 @@ Current TODO list :
 - [ ] Add more models (at least 5)
 - [x] Add requirements.txt
 - [ ] Transfer project ot uv to manage dependencies
-- [ ] Add one Swedish dataset
+- [X] Add one Swedish dataset
 - [ ] Add one Danish dataset
+- [ ] Create tests for datasets
+- [ ] Create tests for models
