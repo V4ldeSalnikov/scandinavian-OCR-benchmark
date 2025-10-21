@@ -1,5 +1,5 @@
-# daOCR_eval - Danish OCR Evaluation (MVP)
-Evaluation framework for OCR models (classical + VLM based) on Danish language. Based on Pydantic Eval framework
+# scandinavian-OCR-benchmark - Scandinavian OCR Evaluation (MVP)
+Evaluation framework for OCR models (classical + VLM based) on mainland Scandinavian languages. Based on Pydantic Eval framework
 
 
 Current TODO list :
