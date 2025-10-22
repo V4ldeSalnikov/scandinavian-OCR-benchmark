@@ -3,6 +3,7 @@
 Evaluation framework for Multilingual, Multitype OCR models (classical + VLM based). Based on Pydantic Eval framework
 
 Dataset TODO list:
+
   Danish :
   - [ ] [Historical Danish Handwriting](https://huggingface.co/datasets/aarhus-city-archives/historical-danish-handwriting)
 
@@ -19,6 +20,7 @@ Dataset TODO list:
 
 
 Models TODO list :
+
   Classical OCR models :
   - [ ] [docTR danish](https://huggingface.co/diversen/doctr-torch-crnn_vgg16_bn-danish-v1)
   - [ ] [Tesseract](https://tesseract-ocr.github.io/tessdoc/)
