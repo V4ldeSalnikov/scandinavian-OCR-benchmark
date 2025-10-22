@@ -39,3 +39,4 @@ General benchmark TODO list :
 - [ ] Transfer project ot uv to manage dependencies
 - [ ] Create tests for datasets
 - [ ] Create tests for models
+- [ ] Automatically set the language for the model, depending on the dataset that is being used for evaluation
