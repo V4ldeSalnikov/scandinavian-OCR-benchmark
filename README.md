@@ -1,4 +1,4 @@
-# scandinavian-OCR-benchmark - Scandinavian OCR Evaluation (MVP)
+# World-OCR-Benchmark (MVP)
 
 Evaluation framework for Multilingual, Multitype OCR models (classical + VLM based). Based on Pydantic Eval framework
 
