@@ -5,7 +5,7 @@ Evaluation framework for Multilingual, Multitype OCR models (classical + VLM bas
 Dataset TODO list:
 
   Danish :
-  - [ ] [Historical Danish Handwriting](https://huggingface.co/datasets/aarhus-city-archives/historical-danish-handwriting)
+  - [X] [Historical Danish Handwriting](https://huggingface.co/datasets/aarhus-city-archives/historical-danish-handwriting)
 
   Swedish :
   - [ ] [Swedish newspapers 1871-1906](https://spraakbanken.gu.se/en/resources/svenska-tidningar-1871-1906)
