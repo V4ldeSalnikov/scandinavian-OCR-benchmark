@@ -1,14 +1,26 @@
 from models.model_interface import OCRModel, OCRInput, OCROutput
-from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoProcessor
+from transformers import Qwen3VLForConditionalGeneration, AutoTokenizer, AutoProcessor, Qwen2VLForConditionalGeneration
 from qwen_vl_utils import process_vision_info
 
-class Qwen2bAdapter(OCRModel):
+class QwenVLAdapter(OCRModel):
 
-    def __init__(self):
-        self.id = "qwen2-2b-vl"
-        self.model = Qwen2VLForConditionalGeneration.from_pretrained(
-    "Qwen/Qwen2-VL-2B-Instruct", torch_dtype="auto", device_map="auto")
-        self.processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct")
+    def __init__(self, model_id: str):
+        self.id = model_id
+
+
+        if self.id.startswith("Qwen2"):
+            self.model = Qwen2VLForConditionalGeneration.from_pretrained(
+                f"Qwen/{model_id}", torch_dtype="auto", device_map="auto")
+        elif self.id.startswith("Qwen3"):
+            self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+            f"Qwen/{model_id}", torch_dtype="auto", device_map="auto")
+        else:
+            raise ValueError(
+                f"Unrecognized Qwen VL family in '{model_id}'. "
+                "Expected 'Qwen2-VL-*-Instruct' or 'Qwen3-VL-*-Instruct'."
+            )
+
+        self.processor = AutoProcessor.from_pretrained(f"Qwen/{model_id}")
         self.prompt = "You are an OCR engine. Transcribe the Danish text. Return ONLY the text from the image, Do not include coordinates, bounding boxes, labels, or explanations. Output text in a single line"
 
     def __call__(self,inputs : OCRInput) -> OCROutput:
